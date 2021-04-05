@@ -1,20 +1,85 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="main-div ion-padding">
+    <h1 class="ion-padding">Money Tracker</h1>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="list">
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Lunch
+              <p class="expense">Food</p>
+            </ion-label>
+            <p class="amount">$15</p>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="dark">
+              <ion-icon name="create-outline"  routerLink="/add-edit-data"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Gym MenberShip
+              <p class="expense">Gym</p>
+            </ion-label>
+            <p class="amount">$90</p>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="dark">
+              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Monthly Salary
+              <p class="income">Job</p>
+            </ion-label>
+            <p class="amount">$2100</p>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="dark">
+              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Bonus Salary
+              <p class="income">Job</p>
+            </ion-label>
+            <p class="amount">$200</p>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="dark">
+              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+    <icon-fab-button color="dark">
+      <ion-icon name="add-outline" routerLink="/add-edit-data"></ion-icon>
+    </icon-fab-button>
   </div>
 </ion-content>
