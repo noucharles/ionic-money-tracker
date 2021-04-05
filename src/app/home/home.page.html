@@ -4,13 +4,13 @@
 
     <div class="list">
       <ion-list>
-        <ion-item-sliding>
+        <ion-item-sliding *ngFor="let transaction of moneyTransactions">
           <ion-item>
             <ion-label>
-              Lunch
-              <p class="expense">Food</p>
+              {{transaction.title}}
+              <p [ngClass]="{expense: transaction.type == 'expense', income: transaction.type == 'income'}" >{{transaction.subTitle}}</p>
             </ion-label>
-            <p class="amount">$15</p>
+            <p class="amount" [ngClass]="{expense: transaction.type == 'expense', income: transaction.type == 'income'}">${{transaction.amount}}</p>
           </ion-item>
           <ion-item-options side="end">
             <ion-item-option color="danger">
@@ -22,61 +22,7 @@
           </ion-item-options>
         </ion-item-sliding>
 
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Gym MenberShip
-              <p class="expense">Gym</p>
-            </ion-label>
-            <p class="amount">$90</p>
-          </ion-item>
-          <ion-item-options side="end">
-            <ion-item-option color="danger">
-              <ion-icon name="trash-outline"></ion-icon>
-            </ion-item-option>
-            <ion-item-option color="dark">
-              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
 
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Monthly Salary
-              <p class="income">Job</p>
-            </ion-label>
-            <p class="amount">$2100</p>
-          </ion-item>
-          <ion-item-options side="end">
-            <ion-item-option color="danger">
-              <ion-icon name="trash-outline"></ion-icon>
-            </ion-item-option>
-            <ion-item-option color="dark">
-              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Bonus Salary
-              <p class="income">Job</p>
-            </ion-label>
-            <p class="amount">$200</p>
-          </ion-item>
-          <ion-item-options side="end">
-            <ion-item-option color="danger">
-              <ion-icon name="trash-outline"></ion-icon>
-            </ion-item-option>
-            <ion-item-option color="dark">
-              <ion-icon name="create-outline" routerLink="/add-edit-data"></ion-icon>
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-      </ion-list>
-    </div>
 
     <icon-fab-button color="dark">
       <ion-icon name="add-outline" routerLink="/add-edit-data"></ion-icon>
